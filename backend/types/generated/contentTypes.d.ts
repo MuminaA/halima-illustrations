@@ -369,12 +369,12 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiCategorieCategorie extends Struct.CollectionTypeSchema {
+export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   collectionName: 'categories';
   info: {
-    displayName: 'Categories';
+    displayName: 'Category';
     pluralName: 'categories';
-    singularName: 'categorie';
+    singularName: 'category';
   };
   options: {
     draftAndPublish: true;
@@ -387,7 +387,7 @@ export interface ApiCategorieCategorie extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::categorie.categorie'
+      'api::category.category'
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
@@ -407,7 +407,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   collectionName: 'products';
   info: {
     description: '';
-    displayName: 'Products';
+    displayName: 'Product';
     pluralName: 'products';
     singularName: 'product';
   };
@@ -417,7 +417,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   attributes: {
     categories: Schema.Attribute.Relation<
       'manyToMany',
-      'api::categorie.categorie'
+      'api::category.category'
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -459,7 +459,7 @@ export interface ApiSubCategorieSubCategorie
   attributes: {
     categories: Schema.Attribute.Relation<
       'manyToMany',
-      'api::categorie.categorie'
+      'api::category.category'
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -988,7 +988,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::categorie.categorie': ApiCategorieCategorie;
+      'api::category.category': ApiCategoryCategory;
       'api::product.product': ApiProductProduct;
       'api::sub-categorie.sub-categorie': ApiSubCategorieSubCategorie;
       'plugin::content-releases.release': PluginContentReleasesRelease;

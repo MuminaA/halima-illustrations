@@ -24,7 +24,7 @@
     "categories": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::categorie.categorie",
+      "target": "api::category.category",
       "inversedBy": "sub_categories"
     }
   }

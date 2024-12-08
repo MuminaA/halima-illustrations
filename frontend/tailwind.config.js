@@ -11,6 +11,9 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        rubik: ['Rubik', 'Arial', 'Helvetica', 'sans-serif'] // Define Poppins as a custom font
+      },
     },
   },
   plugins: [],
