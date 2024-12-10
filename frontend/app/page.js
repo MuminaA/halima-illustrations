@@ -1,18 +1,14 @@
 import Navbar from "./src/Components/Navbar/Navbar";
-import Hero from "./src/Components/Hero/Hero";
-import Featured from "./src/Components/Featured/Featured";
-import Aboutme from "./src/Components/Aboutme/Aboutme";
 import Footer from "./src/Components/Footer/Footer";
-import Cart from "./src/Components/Cart/Cart";
+import Home from "./src/Pages/Home/Home";
+import Shop from "./src/Pages/Shop/Shop";
 
-export default function Home() {
+export default function Page() {
   return (
     <div>
+      <Navbar className="md:px-24" />
       <div className="md:mx-24">
-        <Navbar />
-        <Hero className="mb-[6rem]" />
-        <Featured className="mb-[6rem]" />
-        <Aboutme className="mb-[6rem]" />
+        <Shop />
       </div>
       <Footer />
     </div>

@@ -9,7 +9,7 @@ const Cart = () => {
         className="overflow-y-auto max-h-[350px]"
       > {/*Add a limit to how many products show */}
         <div className="item flex gap-5 mb-5 items-center" key="">
-          <img src="" alt="" className="w-20 h-[100px] object-cover" />
+          <img src="assets/demoPic.png" alt="" className="w-20 h-[100px] object-cover" />
           <div className="details">
             <h2 className="mb-4 text-gray-400 text-lg capitalize">Art</h2>
             <p className="text-sm mb-2.5">Lorem ipsum dolor sit amet...</p> {/*Add a limit to how long desc is*/}
